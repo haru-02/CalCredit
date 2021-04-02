@@ -11,5 +11,5 @@ This project was an idea for the INNOVATION HUB hackathon of Oman Arab Bank.
 
 # contributors
 
-haru-02
+haru-02,
 SHRAVANNARAYAN
