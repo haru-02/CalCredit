@@ -1,0 +1,142 @@
+primary input : loan seeking - personal, car, housing, educational. 
+                expected loan amount. 
+                monthly salary.
+
+________________________________________________________________
+
+credit = 10 * ( 35%a + 30%b + 15%c + 10%D + 10%e ) (out of 100).
+
+a, b, c, d, and e are trust factors on a scale of 1 to 10, 1 means risky, 10 means safe. 
+
+
+note: any person with a commitment of EMI of close to or above 50% of his salary is less likely to get another loan. 
+      because of his repayment capacity.   
+
+_________________________________________________________________
+
+a - > payment history
+
+target : find and classify the range. 
+
+input : monthly payment commitments.
+
+1) rent paid. 
+    
+    0 to 20 % of the salary -> trust_factor + 1.
+    20 to 30 % of the salary -> trust_factor + 0.
+    30% above of the salary -> trust_factor - 1.
+
+    p1%
+     
+2) histoty of bills paid for the services availed frequently. 
+
+    basic amenities (water gas electricity communication transport) - 12%  
+
+    p2%
+
+3) EMI paid for current loans. > 50% flag for no loan. // first check.
+    
+    p3%
+
+4) loans paid off. // this requires research on how it will affect the trust factor positively. // personal opinion - not required.
+
+    emi loan payment period. and amount of money borrowed. // ratio 
+
+5) overdue bills. 
+
+   0 to 20    0 
+   20 to 50  -1
+   50 above  -2
+
+100 - (p1+p2+p3) = % salary left. 
+
+30 to 50% +1
+20 to 30%  0
+below 20% -1
+
+start 5 / 10  
+
+end min 1 / 10 
+end max 7 / 10 
+
+________________________________________________________________
+
+b - > amounts owed
+
+target : find and classify the range.
+input : outstanding loans, current credit balance of all cards owned, overdue bills, fines not paid to the government.
+prospective input :  
+
+
+1) overdue bills. 
+
+   0 to 20  -  0 
+   20 to 50 - -1
+   50 above - -2
+
+2) outstanding credit. (annual vs credit limit used)
+
+    0 to 25  -  0 
+    25 to 50 - -1
+    50 above - -2
+
+3) fines unpaid, and owed to government and other organisations
+
+    no fines - 2
+    above 0 to 10 - -0.5
+    10 to 20 - -1
+    20 to 40 - -2
+    40 above - -3
+
+start 5 / 10
+
+end min -2 / 10.
+end max 7 / 10.
+    
+________________________________________________________________
+
+
+c - > length of credit history
+
+target : find and classify the range. 
+input :
+
+number of bad track records over the past 7 years.
+
+prospectie input :
+
+-1 for each bad track record.
+
+start 10 / 10 
+min   0 / 10 
+max 10 / 10  
+
+________________________________________________________________
+
+
+d - > credit mix 
+
+target : find and classify the range. 
+input : number of credit cards, info on its balance and the number of loans closed and info on loans currently open.  
+prospective input : 
+
+for each number of credit cards you have +1
+for each number of credit cards maxed out -1
+for each general loan closed +0.5
+for each installment paid late -0.5 
+
+start 5/10 
+end min 0/10 
+end max 10/10
+
+________________________________________________________________
+
+e -> new credit 
+
+includes miscellaneous factors // have to counsult another person about this. 
+
+target : find and classify the range. 
+input : 
+prospective input : 
+
+________________________________________________________________
