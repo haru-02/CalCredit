@@ -1,0 +1,185 @@
+/* Navbar */
+
+.nav-title {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 4s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  
+  /* End Navbar */
+  
+  /* Form-Input */
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+  /* End Form-Input */
+
+  /* Button */
+  
+  .button {
+    background-color: #f4511e;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  /* End Button */
+
+  /* Jumbotron Score Bar. */
+
+  .jbscore-hide{
+    display: none;
+  }
+
+  .jbscore-show{
+    display: normal;
+  }
+
+  /* Score Color Based on Range. */
+  .final-score-good{
+   color:green; 
+  }
+
+  .final-score-invalid{
+    color:#000;
+  }
+
+  .final-score-average{
+    color:orange;
+  }
+
+  .final-score-bad{
+    color:red;
+  }
+  /* End of Score Color. */
+
+
+  /* Flags for User Warnings. */
+
+  .noflag{
+    display: none;
+  }
+
+  .flag1{
+    display: normal;
+    color:orange;
+  }
+
+  .flag2{
+    display: normal;
+    color:red;
+  }
+
+  /* End of Flags. */
+
+  /* Jumbotron Score Bar End. */
+
+/* About Cards */
+
+.wrapper {
+padding-top: 120px;
+}
+
+.card-img-top {
+box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.card-body{
+    text-align: center;
+    box-shadow: 0px 15px 15px -8px rgba(0,0,0,0.5)
+}
+
+.card-body h6 {
+font-size: 14px;
+text-transform: uppercase;
+color: deeppink;
+}
+
+.card-title {
+text-transform: uppercase;
+font-weight: bold;
+font-size: 24px;
+}
+
+.socials a {
+width: 40px;
+height: 40px;
+display: inline-block;
+border-radius: 50%;
+margin: 0 5px;
+}
+
+.socials a i {
+color: #fff;
+padding: 12px 0;
+}    
+
+.socials a:nth-child(1) {
+background: #cd486b;
+}
+
+.socials a:nth-child(2) {
+background: #211F1F;
+}
+
+.socials a:hover{
+     transform: scale(1.2);
+}
+
+@media (max-width: 800px){
+    .mx-30{
+        margin-bottom: 30px;
+    }
+}
+
+/* End About Cards */
